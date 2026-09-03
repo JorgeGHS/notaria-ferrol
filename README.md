@@ -45,30 +45,29 @@ Si cambias un enlace del menú, cámbialo en los diez HTML.
    | `08-xunta-vivienda-social.jpg` | https://static.wixstatic.com/media/f31337_7872cf0eb5d246f78d414116b7415870~mv2.png |
    | `09-fragas-do-eume.jpg` | https://static.wixstatic.com/media/f31337_2928bca13db24e8299a42a03bee5d089~mv2.png |
 
-   Las fotos del edificio y la sala de juntas ya no van sueltas: ahora forman el
-   carrusel de "Dónde estamos" — usa los nombres `foto1.avif`...`foto10.avif` del
-   punto 2 de arriba.
+   **`assets/img/notaria/`**
+   | Archivo | Descarga desde |
+   |---|---|
+   | `fachada-1.jpg` | https://static.wixstatic.com/media/f31337_4007a8373aeb46e3a177483cde3d6d44~mv2.jpg |
+   | `fachada-2.jpg` | https://static.wixstatic.com/media/f31337_cb336ab82cc04fc596086964cdbb062b~mv2.jpg |
+   | `sala-de-juntas.jpg` | https://static.wixstatic.com/media/f31337_c4e5b3d75608471c806263fd02468cd0~mv2.jpg |
 
-2. **Fotos del carrusel de "Dónde estamos".** La página espera 10 archivos en
-   `assets/img/notaria/`, llamados exactamente `foto1.avif`, `foto2.avif`... hasta
-   `foto10.avif`. Cópialos ahí con esos nombres.
-3. **Clave del formulario.** Entra en https://web3forms.com, pon el email de la notaría
+2. **Clave del formulario.** Entra en https://web3forms.com, pon el email de la notaría
    (info@notarioferrol.com) y te dan una *access key* al momento. Ábrela en `main.js`
    y sustituye `TU_ACCESS_KEY_AQUI`. Hasta que lo hagas, el formulario avisa en pantalla
    en vez de fallar en silencio.
-4. **Facebook.** Añadí el enlace a Facebook que encontré público en la web actual
+3. **Facebook.** Añadí el enlace a Facebook que encontré público en la web actual
    (no me lo pediste explícitamente) — bórralo del pie de página en las 10 páginas
    si no lo queréis mantener.
-5. **Textos legales.** Los tres archivos legales son un borrador orientativo, ya con
-   el NIF de tu padre (33237811M) y sin ninguna sociedad, solo a su nombre como
-   autónomo. Que los valide él antes de publicar.
-6. **Gallego.** La traducción al gallego la he hecho yo (normativa RAG, no
+4. **Textos legales.** Los tres archivos legales son un borrador orientativo con
+   `[COMPLETAR]` en el NIF. Que los valide tu padre antes de publicar.
+5. **Gallego.** La traducción al gallego la he hecho yo (normativa RAG, no
    reintegracionista). Recomiendo que alguien gallegohablante la revise antes de
    publicar, sobre todo la página de Derecho Gallego, antes de que sea pública.
-7. **Favicon.** No he generado favicon ni apple-touch-icon nuevos; puedes reutilizar
+6. **Favicon.** No he generado favicon ni apple-touch-icon nuevos; puedes reutilizar
    los actuales de Wix (el escudo circular con la "P") o pedirme que te haga unos.
-8. **WhatsApp.** Lo he quitado por completo, tal y como pediste (botón flotante y
-   modal).
+7. **WhatsApp.** He puesto `notariaferrol` como usuario de ejemplo en el botón de
+   WhatsApp — cámbialo por el real si tenéis uno, o quita el botón si no lo usáis.
 
 ## Publicar en GitHub Pages
 
@@ -97,10 +96,8 @@ subdominio `www` con un `CNAME` a `jorgeghs.github.io`.
   como `--brand`.
 - Tipografías: Source Serif 4 (titulares) + Source Sans 3 (texto), igual que en la
   web de tu hermano.
-- El selector de idioma (banderas ES/GAL) guarda la preferencia en `localStorage` del
-  navegador (no es una cookie de seguimiento).
+- El selector de idioma (ES/GL) guarda la preferencia en `localStorage` del navegador
+  (no es una cookie de seguimiento).
 - El mapa de Google en "Dónde estamos" se carga siempre (a diferencia de la web de tu
   hermano, que esperaba un clic) — si quieres el mismo comportamiento de un solo clic,
   dímelo y lo ajusto.
-- El carrusel de fotos es CSS + JS propio (sin librerías): funciona con gestos táctiles
-  en móvil (desliza) y con los botones de flecha o los puntos en escritorio.
