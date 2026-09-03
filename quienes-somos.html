@@ -33,43 +33,39 @@
 <circle cx="50" cy="50" r="31" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="2 4"/>
 <text x="50" y="59" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="600" fill="currentColor">P</text>
 </svg>
-<span>
-<span class="brand__name">García de los Huertos Vidal</span>
+<span class="brand__text">
+<span class="brand__name">Pedro García de los Huertos Vidal</span>
 <span class="brand__role">Notaría &middot; Ferrol</span>
 </span>
 </a>
 <nav class="nav" id="menu-principal" aria-label="Navegación principal">
 <ul>
-<li><a href="index.html"><span data-lang-block="es">Inicio</span><span data-lang-block="gl">Home</span></a></li>
+<li><a href="index.html"><span data-lang-block="es">Inicio</span><span data-lang-block="gl">Inicio</span></a></li>
 <li><a href="que-hacemos.html"><span data-lang-block="es">Qué hacemos</span><span data-lang-block="gl">Que facemos</span></a></li>
 <li><a href="quienes-somos.html" aria-current="page"><span data-lang-block="es">Quiénes somos</span><span data-lang-block="gl">Quen somos</span></a></li>
+<li><a href="donde-estamos.html"><span data-lang-block="es">Dónde estamos</span><span data-lang-block="gl">Onde estamos</span></a></li>
 <li><a href="derecho-gallego.html"><span data-lang-block="es">Derecho gallego</span><span data-lang-block="gl">Dereito galego</span></a></li>
 <li><a href="prensa.html"><span data-lang-block="es">Prensa</span><span data-lang-block="gl">Prensa</span></a></li>
-<li><a href="donde-estamos.html"><span data-lang-block="es">Dónde estamos</span><span data-lang-block="gl">Onde estamos</span></a></li>
 <li><a href="contacto.html"><span data-lang-block="es">Contacto</span><span data-lang-block="gl">Contacto</span></a></li>
 </ul>
 <div class="nav__cta">
 <button class="btn btn--primary btn--block" type="button" data-open-modal><span data-lang-block="es">Agenda tu cita</span><span data-lang-block="gl">Pide a túa cita</span></button>
 <a class="nav__tel" href="tel:+34981364035">981 36 40 35</a>
-<div class="lang-switch" role="group" aria-label="Selector de idioma">
-<button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
-<button type="button" data-lang-btn="gl" aria-pressed="false">GL</button>
-</div>
 </div>
 </nav>
 <div class="header-actions">
-<div class="lang-switch" role="group" aria-label="Selector de idioma" style="display:none" id="lang-switch-desktop">
-<button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
-<button type="button" data-lang-btn="gl" aria-pressed="false">GL</button>
+<div class="lang-switch" role="group" aria-label="Selector de idioma">
+<button type="button" data-lang-btn="es" aria-pressed="true" title="Castellano"><svg viewBox="0 0 20 14" width="20" height="14" aria-hidden="true"><rect width="20" height="14" fill="#AA151B"/><rect y="3.5" width="20" height="7" fill="#F1BF00"/></svg><span>ES</span></button>
+<button type="button" data-lang-btn="gl" aria-pressed="false" title="Galego"><svg viewBox="0 0 20 14" width="20" height="14" aria-hidden="true"><rect width="20" height="14" fill="#FFFFFF"/><polygon points="0,0 7,0 20,12 20,14 15,14" fill="#0090C7"/></svg><span>GAL</span></button>
 </div>
 <a class="header-tel" href="tel:+34981364035" aria-label="Llamar al 981 36 40 35">
 <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
 <span>981 36 40 35</span>
 </a>
 <button class="btn btn--primary btn--sm header-cta" type="button" data-open-modal><span data-lang-block="es">Agenda tu cita</span><span data-lang-block="gl">Pide cita</span></button>
-<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
-<span class="nav-toggle__bars" aria-hidden="true"></span>
-<span class="nav-toggle__txt" data-lang-block="es">Menú</span><span class="nav-toggle__txt" data-lang-block="gl">Menú</span>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+<svg class="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+<span class="nav-toggle__txt">Menú</span>
 </button>
 </div>
 </div>
@@ -114,13 +110,15 @@
 
 <section class="section section--wash">
 <div class="wrap">
+<div class="section-intro">
 <p class="eyebrow"><span data-lang-block="es">Nuestra filosofía</span><span data-lang-block="gl">A nosa filosofía</span></p>
 <h2><span data-lang-block="es">Explicar antes de firmar</span><span data-lang-block="gl">Explicar antes de asinar</span></h2>
 <hr class="rule">
-<p class="lead" style="max-width:64ch">
+<p class="lead">
 <span data-lang-block="es">Sabemos que cuando vas a firmar un documento jurídico te preocupan las consecuencias que puede tener. Por eso te explicamos con claridad lo que vas a firmar y resolvemos todas tus dudas antes de la firma. Solo necesitamos que nos cuentes lo que quieres que te aclaremos.</span>
 <span data-lang-block="gl">Sabemos que cando vas asinar un documento xurídico che preocupan as consecuencias que pode ter. Por iso explicámosche con claridade o que vas asinar e resolvemos todas as túas dúbidas antes da sinatura. Só precisamos que nos contes o que queres que che aclaremos.</span>
 </p>
+</div>
 </div>
 </section>
 </main>
@@ -140,12 +138,12 @@
 <div>
 <h2><span data-lang-block="es">Secciones</span><span data-lang-block="gl">Seccións</span></h2>
 <ul>
-<li><a href="index.html"><span data-lang-block="es">Inicio</span><span data-lang-block="gl">Home</span></a></li>
+<li><a href="index.html"><span data-lang-block="es">Inicio</span><span data-lang-block="gl">Inicio</span></a></li>
 <li><a href="que-hacemos.html"><span data-lang-block="es">Qué hacemos</span><span data-lang-block="gl">Que facemos</span></a></li>
 <li><a href="quienes-somos.html"><span data-lang-block="es">Quiénes somos</span><span data-lang-block="gl">Quen somos</span></a></li>
+<li><a href="donde-estamos.html"><span data-lang-block="es">Dónde estamos</span><span data-lang-block="gl">Onde estamos</span></a></li>
 <li><a href="derecho-gallego.html"><span data-lang-block="es">Derecho gallego</span><span data-lang-block="gl">Dereito galego</span></a></li>
 <li><a href="prensa.html"><span data-lang-block="es">Prensa</span><span data-lang-block="gl">Prensa</span></a></li>
-<li><a href="donde-estamos.html"><span data-lang-block="es">Dónde estamos</span><span data-lang-block="gl">Onde estamos</span></a></li>
 <li><a href="contacto.html"><span data-lang-block="es">Contacto</span><span data-lang-block="gl">Contacto</span></a></li>
 </ul>
 </div>
@@ -164,7 +162,7 @@
 <h2><span data-lang-block="es">Contacto</span><span data-lang-block="gl">Contacto</span></h2>
 <address>
 Calle Dolores, 23, 1&ordm; &mdash; 15402 Ferrol (A Coru&ntilde;a)<br>
-<a href="tel:+34981364035">981 36 40 35</a> &middot; 981 35 54 77 &middot; 981 35 21 99<br>
+<a href="tel:+34981364035">981 36 40 35</a> &middot; <a href="tel:+34981355477">981 35 54 77</a> &middot; <a href="tel:+34981352199">981 35 21 99</a><br>
 <span data-lang-block="es">Fax: </span><span data-lang-block="gl">Fax: </span>981 35 22 78<br>
 <a href="mailto:info@notarioferrol.com">info@notarioferrol.com</a>
 </address>
@@ -172,7 +170,7 @@ Calle Dolores, 23, 1&ordm; &mdash; 15402 Ferrol (A Coru&ntilde;a)<br>
 </div>
 <div class="footer-bottom">
 <p>&copy; <span data-year>2026</span> Notar&iacute;a Pedro Luis Garc&iacute;a de los Huertos Vidal<br>
-<span style="opacity:.75"><span data-lang-block="es">Esta web es informativa y no sustituye al asesoramiento notarial del caso concreto.</span><span data-lang-block="gl">Esta web &eacute; informativa e non substit&uacute;e o asesoramento notarial do caso concreto.</span></span></p>
+<span style="opacity:.8"><span data-lang-block="es">Esta web es informativa y no sustituye al asesoramiento notarial del caso concreto.</span><span data-lang-block="gl">Esta web &eacute; informativa e non substit&uacute;e o asesoramento notarial do caso concreto.</span></span></p>
 <ul>
 <li><a href="aviso-legal.html">Aviso legal</a></li>
 <li><a href="privacidad.html">Privacidad</a></li>
@@ -223,25 +221,6 @@ Calle Dolores, 23, 1&ordm; &mdash; 15402 Ferrol (A Coru&ntilde;a)<br>
 <p style="margin-top:1.25rem"><button class="btn btn--primary btn--block" type="submit"><span data-lang-block="es">Solicitar cita</span><span data-lang-block="gl">Solicitar cita</span></button></p>
 <p class="form-status" role="status" aria-live="polite"></p>
 </form>
-</div>
-</div>
-<button class="wa-fab" type="button" data-open-wa aria-label="Escribir por WhatsApp">
-<svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 1.9.8 2.7.9 3.6.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2A10 10 0 0 0 3.5 17.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
-<span>WhatsApp</span>
-</button>
-<div class="modal" id="modal-wa" hidden role="dialog" aria-modal="true" aria-labelledby="wa-titulo">
-<div class="modal__backdrop" data-close-modal></div>
-<div class="modal__panel modal__panel--sm">
-<button class="modal__close" type="button" data-close-modal aria-label="Cerrar">&times;</button>
-<h2 id="wa-titulo">Escr&iacute;benos por WhatsApp</h2>
-<p class="modal__intro">Atendemos mensajes durante el horario de la notar&iacute;a. Busca este nombre de usuario en WhatsApp:</p>
-<div class="wa-user"><code id="wa-username">notariaferrol</code><button class="btn btn--ghost" type="button" data-copy="wa-username">Copiar</button></div>
-<ol class="wa-steps">
-<li>Abre WhatsApp y pulsa la lupa de b&uacute;squeda.</li>
-<li>Escribe <strong>notariaferrol</strong> y selecciona el resultado.</li>
-<li>Escr&iacute;benos tu consulta. Te responderemos lo antes posible.</li>
-</ol>
-<p class="wa-note">Si tu WhatsApp todav&iacute;a no permite buscar por nombre de usuario, escr&iacute;benos a <a href="mailto:info@notarioferrol.com">info@notarioferrol.com</a> o ll&aacute;manos al <a href="tel:+34981364035">981 36 40 35</a>.</p>
 </div>
 </div>
 <script src="main.js"></script>

@@ -17,7 +17,7 @@
     });
   }
 
-  /* ---------- Modales (cita / WhatsApp) ---------- */
+  /* ---------- Modal de cita ---------- */
   function openModal(modal){
     if(!modal) return;
     modal.hidden = false;
@@ -33,9 +33,6 @@
   document.querySelectorAll('[data-open-modal]').forEach(function(btn){
     btn.addEventListener('click', function(){ openModal(document.getElementById('modal-cita')); });
   });
-  document.querySelectorAll('[data-open-wa]').forEach(function(btn){
-    btn.addEventListener('click', function(e){ e.preventDefault(); openModal(document.getElementById('modal-wa')); });
-  });
   document.querySelectorAll('[data-close-modal]').forEach(function(btn){
     btn.addEventListener('click', function(){ closeModal(btn.closest('.modal')); });
   });
@@ -43,18 +40,6 @@
     if(e.key === 'Escape'){
       document.querySelectorAll('.modal:not([hidden])').forEach(closeModal);
     }
-  });
-
-  /* ---------- Copiar usuario de WhatsApp ---------- */
-  document.querySelectorAll('[data-copy]').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var target = document.getElementById(btn.getAttribute('data-copy'));
-      if(!target) return;
-      navigator.clipboard && navigator.clipboard.writeText(target.textContent.trim());
-      var original = btn.textContent;
-      btn.textContent = '¡Copiado!';
-      setTimeout(function(){ btn.textContent = original; }, 1500);
-    });
   });
 
   /* ---------- Mostrar campo "Banco" solo si el trámite es hipoteca ---------- */
@@ -118,6 +103,47 @@
   document.querySelectorAll('[data-lang-btn]').forEach(function(btn){
     btn.addEventListener('click', function(){
       applyLang(btn.getAttribute('data-lang-btn'));
+    });
+  });
+
+  /* ---------- Carrusel (Dónde estamos) ---------- */
+  document.querySelectorAll('[data-carousel]').forEach(function(root){
+    var viewport = root.querySelector('.carousel__viewport');
+    var slides = Array.prototype.slice.call(root.querySelectorAll('.carousel__slide'));
+    var dotsWrap = root.querySelector('.carousel__dots');
+    var prevBtn = root.querySelector('.carousel__btn--prev');
+    var nextBtn = root.querySelector('.carousel__btn--next');
+    if (!viewport || slides.length === 0) return;
+
+    slides.forEach(function(_, i){
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Ir a la foto ' + (i + 1));
+      if (i === 0) dot.setAttribute('aria-current', 'true');
+      dot.addEventListener('click', function(){ goTo(i); });
+      if (dotsWrap) dotsWrap.appendChild(dot);
+    });
+    var dots = dotsWrap ? Array.prototype.slice.call(dotsWrap.children) : [];
+
+    function currentIndex(){
+      return Math.round(viewport.scrollLeft / viewport.clientWidth);
+    }
+    function goTo(i){
+      var idx = (i + slides.length) % slides.length;
+      viewport.scrollTo({ left: idx * viewport.clientWidth, behavior: 'smooth' });
+    }
+    function updateDots(){
+      var idx = currentIndex();
+      dots.forEach(function(d, i){
+        if (i === idx) d.setAttribute('aria-current', 'true');
+        else d.removeAttribute('aria-current');
+      });
+    }
+    if (prevBtn) prevBtn.addEventListener('click', function(){ goTo(currentIndex() - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ goTo(currentIndex() + 1); });
+    viewport.addEventListener('scroll', function(){
+      window.clearTimeout(viewport._t);
+      viewport._t = window.setTimeout(updateDots, 100);
     });
   });
 
