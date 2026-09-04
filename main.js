@@ -53,7 +53,7 @@
   }
 
   /* ---------- Envío de formularios (Web3Forms) ---------- */
-  var ACCESS_KEY = 'TU_ACCESS_KEY_AQUI';
+  var ACCESS_KEY = '01f8fb18-285e-41c3-b420-c194d23b9c57';
   document.querySelectorAll('[data-form]').forEach(function(form){
     form.addEventListener('submit', function(e){
       e.preventDefault();
