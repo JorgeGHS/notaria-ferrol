@@ -22,7 +22,7 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{
   margin:0;
   font-family:var(--font-sans);
@@ -30,6 +30,7 @@ body{
   line-height:1.6;
   color:var(--ink);
   background:var(--paper);
+  overflow-x:hidden;
 }
 img{max-width:100%;display:block}
 a{color:var(--brand-dark)}
@@ -301,8 +302,9 @@ p{margin:0 0 1em}
 .map-box iframe{width:100%;height:420px;border:0;display:block}
 
 /* ---------- Derecho gallego: índice + artículos ---------- */
-.dg-layout{display:grid;grid-template-columns:220px 1fr;gap:3rem;align-items:start;text-align:left}
-.toc{position:sticky;top:5.5rem;border-left:2px solid var(--line);padding-left:1.2rem}
+.dg-layout{display:grid;grid-template-columns:220px 1fr;gap:3rem;align-items:start;text-align:left;min-width:0}
+.dg-content{min-width:0}
+.toc{position:sticky;top:5.5rem;border-left:2px solid var(--line);padding-left:1.2rem;min-width:0}
 .toc .eyebrow{font-size:.8rem}
 .toc ol{list-style:none;margin:0;padding:0;counter-reset:toc;display:flex;flex-direction:column;gap:.55em}
 .toc li{counter-increment:toc}
@@ -322,6 +324,46 @@ p{margin:0 0 1em}
   .dg-layout{grid-template-columns:1fr}
   .toc{position:static;border-left:none;border-top:2px solid var(--line);padding-left:0;padding-top:1rem}
   .toc ol{flex-direction:row;flex-wrap:wrap;gap:.6em 1.2em}
+}
+
+/* ---------- Reseñas de Google ---------- */
+.reviews{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;text-align:center}
+.reviews__score{display:flex;flex-direction:column;align-items:center;gap:.3rem}
+.reviews__number{font-family:var(--font-serif);font-size:3rem;font-weight:600;color:var(--ink);line-height:1}
+.reviews__stars{display:flex;gap:.15em;color:var(--gold)}
+.reviews__stars svg{width:20px;height:20px}
+.reviews__count{color:var(--ink-soft);font-size:.92rem}
+.reviews__divider{width:1px;align-self:stretch;background:var(--line)}
+@media (max-width:600px){.reviews__divider{display:none}}
+
+/* ---------- Accesos rápidos bajo el hero ---------- */
+.quick-links{background:#fff;border-bottom:1px solid var(--line)}
+.quick-links__inner{display:flex;gap:.6rem;overflow-x:auto;padding:.9rem 24px;scrollbar-width:none}
+.quick-links__inner::-webkit-scrollbar{display:none}
+.quick-links a{
+  flex-shrink:0;white-space:nowrap;font-size:.86rem;font-weight:600;color:var(--brand-dark);
+  background:var(--brand-light);border:1px solid transparent;border-radius:20px;padding:.45em 1em;text-decoration:none;
+}
+.quick-links a:hover{border-color:var(--brand)}
+
+/* ---------- Barra de contacto fija (móvil) ---------- */
+.mobile-cta-bar{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:120;
+  background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 16px rgba(20,25,22,.08);
+  padding:.55rem .8rem calc(.55rem + env(safe-area-inset-bottom));
+  gap:.6rem;
+}
+.mobile-cta-bar__link{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:.4em;
+  font-family:var(--font-sans);font-weight:700;font-size:.9rem;border-radius:8px;padding:.7em .5em;
+  border:1px solid var(--line);background:#fff;color:var(--brand-dark);text-decoration:none;cursor:pointer;
+}
+.mobile-cta-bar__link--primary{background:var(--brand);border-color:var(--brand);color:#fff}
+@media (max-width:680px){
+  .mobile-cta-bar{display:flex}
+  body{padding-bottom:64px}
+  .carousel__btn--prev{left:6px}
+  .carousel__btn--next{right:6px}
 }
 
 /* ---------- Legal ---------- */
