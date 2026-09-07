@@ -4,16 +4,22 @@
   /* ---------- Menú móvil ---------- */
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('menu-principal');
+  function closeNav(){
+    nav.classList.remove('is-open');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }
   if (toggle && nav) {
     toggle.addEventListener('click', function(){
       var open = nav.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     nav.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded','false');
-      });
+      a.addEventListener('click', closeNav);
+    });
+    var navCloseBtn = nav.querySelector('[data-close-nav]');
+    if (navCloseBtn) navCloseBtn.addEventListener('click', closeNav);
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) closeNav();
     });
   }
 
