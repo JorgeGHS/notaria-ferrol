@@ -99,3 +99,30 @@ esté listo).
 - Barra fija en móvil (Llamar / Agenda tu cita) en todas las páginas.
 - Carrusel de "Dónde estamos": CSS + JS propio, sin librerías externas.
 - Datos estructurados (schema.org `Notary`) en cada página para SEO local.
+
+## Logo nuevo
+
+Limpié el fondo de cuadros del PNG que generaste con Nano Banana (no era
+transparente de verdad, tenía el patrón de cuadritos "pintado" dentro de la
+imagen) y le añadí un disco blanco de respaldo para que se vea bien tanto en
+fondos claros como oscuros. El resultado está en:
+
+- `assets/img/logo-notaria.png` — máster en alta resolución (1024×1024), por
+  si algún día lo necesitas para imprenta, papelería, etc.
+- `assets/img/logo-header.png` — versión ligera (160×160) para la web.
+
+Lo he puesto en:
+- **Cabecera**, sustituyendo al sello sencillo que había antes.
+- **Favicon** (pestaña del navegador): `favicon.ico`, `favicon-32.png`,
+  `favicon-192.png`, `apple-touch-icon.png` — todos regenerados a partir de tu
+  logo nuevo.
+- **Vista previa al compartir** (`og-image.jpg`) — el logo aparece ahora en
+  vez del sello provisional.
+- **Pie de página**, junto al nombre de la notaría.
+- **Quiénes somos**, como una pequeña insignia en la esquina de la foto del
+  notario.
+
+A tamaños muy pequeños (favicon de 32px) el detalle del texto se pierde, como
+pasa con cualquier sello con tanto detalle — es normal e inevitable, lo
+importante es que se reconoce la silueta circular. Si más adelante quieres
+una versión aparte más simplificada solo para el favicon, dímelo.
